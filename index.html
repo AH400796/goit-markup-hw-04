@@ -49,37 +49,37 @@
     <main>
       <!-- Наші пропозиції -->
       <section class="hero">
-        <div class="container">
-          <h1 class="hero-title">
-            Эффективные решения для вашего бизнеса
-          </h1>
-          <button class="hero-button" type="button">Заказать услугу</button>
+        <div class="overlay">
+          <div class="container">
+            <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
+            <button class="hero-button" type="button">Заказать услугу</button>
+          </div>
         </div>
       </section>
       <!-- Наші особливості -->
       <section class="features section">
         <div class="container">
-          <h2 hidden>Наши особенности</h2>
+          <h2 class="visually-hidden">Наши особенности</h2>
           <ul class="features-list list">
-            <li class="features-item">
+            <li class="features-item item-antenna">
               <h3 class="features-title">Внимание к деталям</h3>
               <p>
                 Идейные соображения, а также начало повседневной работы по формированию позиции.
               </p>
             </li>
-            <li class="features-item">
+            <li class="features-item item-clock">
               <h3 class="features-title">Пунктуальность</h3>
               <p>
                 Задача организации, в особенности же рамки и место обучения кадров влечет за собой.
               </p>
             </li>
-            <li class="features-item">
+            <li class="features-item item-diagram">
               <h3 class="features-title">Планирование</h3>
               <p>
                 Равным образом консультация с широким активом в значительной степени обуславливает.
               </p>
             </li>
-            <li class="features-item">
+            <li class="features-item item-astronaut">
               <h3 class="features-title">Современные технологии</h3>
               <p>Значимость этих проблем настолько очевидна, что реализация плановых заданий.</p>
             </li>
@@ -146,18 +146,67 @@
           </ul>
         </div>
       </section>
+      <!-- Постійні клієнти -->
+      <section class="partner section">
+        <div class="container">
+          <h2 class="partner-title">Постоянные клиенты</h2>
+          <ul class="partner-list list">
+            <li class="partner-item">
+              <a href=""><img src="./images/Client1.svg" width="170" height="92" alt="" /></a>
+            </li>
+            <li class="partner-item">
+              <a href=""><img src="./images/Client2.svg" width="170" height="92" alt="" /></a>
+            </li>
+            <li class="partner-item">
+              <a href=""><img src="./images/Client3.svg" width="170" height="92" alt="" /></a>
+            </li>
+            <li class="partner-item">
+              <a href=""><img src="./images/Client4.svg" width="170" height="92" alt="" /></a>
+            </li>
+            <li class="partner-item">
+              <a href=""><img src="./images/Client5.svg" width="170" height="92" alt="" /></a>
+            </li>
+            <li class="partner-item">
+              <a href=""><img src="./images/Client6.svg" width="170" height="92" alt="" /></a>
+            </li>
+          </ul>
+        </div>
+      </section>
     </main>
     <!-- Підвал -->
     <footer class="footer">
       <div class="container">
-        <a href="./index.html" class="logo link">
-          <span class="web-logo">Web</span><span class="studio-logo">Studio</span>
-        </a>
-        <address class="address">
-          <p>г. Киев, пр-т Леси Украинки, 26</p>
-          <a href="mailto:info@example.com" class="email link">info@example.com</a>
-          <a href="tel:+380991111111" class="telnumber link">+38 099 111 11 11</a>
-        </address>
+        <div class="footer-content">
+          <div class="footer-address">
+            <a href="./index.html" class="logo link">
+              <span class="web-logo">Web</span><span class="studio-logo">Studio</span>
+            </a>
+            <address class="address">
+              <p>г. Киев, пр-т Леси Украинки, 26</p>
+              <a href="mailto:info@example.com" class="email link">info@example.com</a>
+              <a href="tel:+380991111111" class="telnumber link">+38 099 111 11 11</a>
+            </address>
+          </div>
+          <div class="social">
+            <h2 class="social-title">Присоединяйтесь</h2>
+            <ul class="social-list list">
+              <li class="social-item">
+                <a href=""
+                  ><img src="./images/Inst.svg" width="44" height="44" alt="instagram"
+                /></a>
+              </li>
+              <li class="social-item">
+                <a href=""><img src="./images/Tw.svg" width="44" height="44" alt="twitter" /></a>
+              </li>
+              <li class="social-item">
+                <a href=""><img src="./images/FB.svg" width="44" height="44" alt="facebook" /></a>
+              </li>
+              <li class="social-item">
+                <a href=""><img src="./images/Link.svg" width="44" height="44" alt="linkedin" /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </footer>
   </body>

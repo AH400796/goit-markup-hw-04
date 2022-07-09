@@ -15,6 +15,7 @@
   --potrfolio-border-color: #eeeeee;
   --header-border-color: #ececec;
   --hero-button-accent-color: #188ce8;
+  --hero-overlay-color: rgba(47, 48, 58, 0.4);
 }
 
 /* General properties */
@@ -77,14 +78,10 @@ img {
   font-family: var(--logo-font);
   font-weight: 700;
   font-size: 26px;
-  line-height: 1.192;
+  line-height: 1.19;
   letter-spacing: 0.03em;
 
   color: var(--black-logo-color);
-}
-
-.navigation .logo {
-  margin-right: 93px;
 }
 
 .web-logo {
@@ -116,12 +113,18 @@ img {
   color: var(--accent-color);
 }
 
-.navigation-list .link {
-  display: block;
+.header-content .link {
+  display: inline-flex;
   padding-top: 32px;
   padding-bottom: 32px;
 
   color: var(--secondary-text-color);
+}
+
+.navigation .logo {
+  margin-right: 93px;
+  padding-top: 24px;
+  padding-bottom: 25px;
 }
 
 .navigation-list .link:hover,
@@ -137,14 +140,13 @@ img {
   margin-right: 50px;
 }
 
-.header-contacts {
-  margin-left: auto;
+.navigation {
+  margin-right: auto;
 }
-
 .navigation-item {
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.143;
+  line-height: 1.14;
   letter-spacing: 0.02em;
 }
 
@@ -154,10 +156,37 @@ img {
 .telnumber {
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.143;
+  line-height: 1.14;
   letter-spacing: 0.02em;
 
   color: var(--primery-text-color);
+}
+.header-contacts {
+  display: inline-flex;
+  align-items: center;
+}
+
+.header-contacts .email,
+.header-contacts .telnumber {
+  align-items: center;
+}
+
+.header-contacts .email::before,
+.header-contacts .telnumber::before {
+  content: '';
+  display: inline-block;
+  margin-right: 10px;
+}
+.header-contacts .email::before {
+  width: 16px;
+  height: 12px;
+  background-image: url(../images/envelope.svg);
+}
+
+.header-contacts .telnumber::before {
+  width: 10px;
+  height: 16px;
+  background-image: url(../images/smartphone.svg);
 }
 
 .address p,
@@ -165,16 +194,34 @@ img {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 1.714;
+  line-height: 1.71;
   letter-spacing: 0.03em;
 
   color: var(--address-contacts-color);
 }
 
-.footer .container,
-.address {
+.footer-content {
+  display: flex;
+}
+.social-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.footer-address,
+.address,
+.social {
   display: flex;
   flex-direction: column;
+}
+
+.social {
+  padding-top: 12px;
+}
+
+.footer-address {
+  margin-right: 70px;
 }
 
 .address p {
@@ -183,7 +230,7 @@ img {
   color: var(--white-text-color);
 }
 
-.address .email {
+.footer .email {
   margin-bottom: 9px;
 }
 
@@ -204,13 +251,36 @@ img {
   background-color: var(--third-background-color);
 }
 
+.social-title {
+  margin-bottom: 20px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--white-text-color);
+}
+
 /* Мейн */
 
 .hero {
-  padding: 200px 0;
   text-align: center;
-
   background-color: var(--third-background-color);
+}
+
+.overlay {
+  padding: 200px 0;
+  height: 600px;
+  max-width: 1600px;
+  margin-right: auto;
+  margin-left: auto;
+  background-image: linear-gradient(to right, var(--hero-overlay-color), var(--hero-overlay-color)),
+    url(../images/hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero-title {
@@ -231,7 +301,7 @@ img {
   padding: 10px 32px;
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.875;
+  line-height: 1.88;
   letter-spacing: 0.06em;
 
   color: var(--white-text-color);
@@ -258,7 +328,7 @@ img {
 .features-title {
   margin-bottom: 10px;
   font-size: 14px;
-  line-height: 1.143;
+  line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
 
@@ -276,17 +346,43 @@ img {
 .features-item p {
   padding-bottom: 3px;
   font-size: 14px;
-  line-height: 1.714;
+  line-height: 1.71;
   letter-spacing: 0.03em;
 }
 
-/* Наша зайнятість + Команда */
+.features-item::before {
+  display: inline-block;
+  content: '';
+  width: inherit;
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.item-antenna::before {
+  background-image: url(../images/antenna.svg);
+}
+.item-clock::before {
+  background-image: url(../images/clock.svg);
+}
+.item-diagram::before {
+  background-image: url(../images/diagram.svg);
+}
+.item-astronaut::before {
+  background-image: url(../images/astronaut.svg);
+}
+
+/* Наша зайнятість + Команда + Постійні клієнти */
 
 .employment-title,
-.team-title {
+.team-title,
+.partner-title {
   margin-bottom: 50px;
   font-size: 36px;
-  line-height: 1.167;
+  line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
 
@@ -294,21 +390,28 @@ img {
 }
 
 .employment-list,
-.team-list {
+.team-list,
+.partner-list {
   display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.employment-list {
+  flex-basis: calc((100%-30 * 2) / 3);
 }
 
-.employment-item:not(:last-child) {
-  margin-right: 30px;
+.team-list {
+  flex-basis: calc((100%-30 * 3) / 4);
+}
+
+.partner-list {
+  flex-basis: calc((100%-30 * 5) / 6);
 }
 
 .team {
   background-color: var(--secondary-background-color);
 }
 
-.team-item:not(:last-child) {
-  margin-right: 30px;
-}
 .team-item img {
   margin-bottom: 30px;
 }
@@ -338,23 +441,33 @@ img {
   letter-spacing: 0.03em;
 }
 
+.team-item::after {
+  content: '';
+  display: block;
+  width: 206px;
+  height: 44px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 16px;
+  background-image: url(../images/Social-links.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 /* Портфоліо */
 
 .filter-list {
   display: flex;
+  gap: 8px;
   justify-content: center;
   margin-bottom: 50px;
-}
-
-.filter-item:not(:last-child) {
-  margin-right: 8px;
 }
 
 .filter-button {
   padding: 6px 22px;
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.625;
+  line-height: 1.63;
   text-align: center;
   letter-spacing: 0.03em;
 
@@ -373,7 +486,7 @@ img {
 
 .filter-title {
   font-size: 16px;
-  line-height: 1.875;
+  line-height: 1.88;
   letter-spacing: 0.03em;
   color: var(--primery-text-color);
 }
@@ -405,4 +518,17 @@ img {
 
   border: 1px solid var(--potrfolio-border-color);
   border-top: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
