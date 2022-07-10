@@ -16,6 +16,7 @@
   --header-border-color: #ececec;
   --hero-button-accent-color: #188ce8;
   --hero-overlay-color: rgba(47, 48, 58, 0.4);
+  --partner-item-color: #afb1b8;
 }
 
 /* General properties */
@@ -39,7 +40,8 @@ ul {
   padding: 0;
 }
 
-img {
+img,
+svg {
   display: block;
 }
 
@@ -387,6 +389,23 @@ img {
   letter-spacing: 0.03em;
 
   color: var(--secondary-text-color);
+}
+
+.partner-icon {
+  color: var(--partner-item-color);
+}
+
+.partner-icon:hover,
+.partner-icon:focus {
+  color: var(--accent-color);
+}
+
+.icon {
+  width: 170px;
+  height: 92px;
+  border: 1px solid currentColor;
+  border-radius: 4px;
+  fill: currentColor;
 }
 
 .employment-list,
