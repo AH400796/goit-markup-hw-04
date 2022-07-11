@@ -329,8 +329,16 @@ svg {
   margin-right: 30px;
 }
 
-.features-item {
+.features-item div {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+
+  background-color: var(--secondary-background-color);
+  border-radius: 4px;
 }
 
 .features-item p {
@@ -339,36 +347,6 @@ svg {
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
-
-.features-list .icon {
-  margin-bottom: 30px;
-}
-
-/* .features-item::before {
-  display: inline-block;
-  content: '';
-  width: inherit;
-  height: 120px;
-  margin-bottom: 30px;
-
-  background-color: #f5f4fa;
-  border-radius: 4px;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.item-antenna::before {
-  background-image: url(../images/icons.svg#icon-antenna);
-}
-.item-clock::before {
-  background-image: url(../images/clock.svg);
-}
-.item-diagram::before {
-  background-image: url(../images/diagram.svg);
-}
-.item-astronaut::before {
-  background-image: url(../images/astronaut.svg);
-} */
 
 /* Наша зайнятість + Команда + Постійні клієнти */
 
