@@ -329,7 +329,7 @@ svg {
   margin-right: 30px;
 }
 
-.features-item div {
+.icon-background {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -341,7 +341,7 @@ svg {
   border-radius: 4px;
 }
 
-.features-item p {
+.features-text {
   padding-bottom: 3px;
   font-size: 14px;
   line-height: 1.71;
